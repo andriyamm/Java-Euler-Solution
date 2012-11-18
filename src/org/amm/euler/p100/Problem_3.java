@@ -1,5 +1,6 @@
 package org.amm.euler.p100;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import org.amm.euler.lib.EulerHelper;
@@ -71,7 +72,8 @@ public class Problem_3 {
 			lastFactor = BigInteger.valueOf(1);
 		}
 		factor = BigInteger.valueOf(3);
-		maxFactor = EulerHelper.squareRoot(n);
+		maxFactor = EulerHelper.squareRoot(new BigDecimal(n));
+		//maxFactor = EulerHelper.squareRoot_0(n);
 		while ((n.compareTo(temp_f1) > 0) && (factor.compareTo(maxFactor) <= 0)) {
 			if (n.remainder(factor).equals(temp_f0)) {
 				n = n.divide(factor);
@@ -79,7 +81,8 @@ public class Problem_3 {
 				while (n.remainder(factor).equals(temp_f0)) {
 					n = n.divide(factor);
 				}
-				maxFactor =  BigInteger.valueOf(3);//(long) Math.sqrt(n);
+				maxFactor =   EulerHelper.squareRoot(new BigDecimal(n));
+				//maxFactor =   EulerHelper.squareRoot_0(n);
 			}
 			factor = factor.add(temp_f2);
 		}
