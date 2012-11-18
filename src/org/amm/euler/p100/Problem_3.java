@@ -2,6 +2,8 @@ package org.amm.euler.p100;
 
 import java.math.BigInteger;
 
+import org.amm.euler.lib.EulerHelper;
+
 /**
  * The prime factors of 13195 are 5, 7, 13 and 29.
  * 
@@ -69,7 +71,7 @@ public class Problem_3 {
 			lastFactor = BigInteger.valueOf(1);
 		}
 		factor = BigInteger.valueOf(3);
-		maxFactor = BigInteger.valueOf(3);//(long) Math.sqrt(n.);
+		maxFactor = EulerHelper.squareRoot(n);
 		while ((n.compareTo(temp_f1) > 0) && (factor.compareTo(maxFactor) <= 0)) {
 			if (n.remainder(factor).equals(temp_f0)) {
 				n = n.divide(factor);
@@ -88,7 +90,7 @@ public class Problem_3 {
 			return n;
 		}
 		
-	}// po method
+	}
 	
-}// po class
+}
 
