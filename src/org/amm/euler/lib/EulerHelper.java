@@ -3,6 +3,10 @@ package org.amm.euler.lib;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+/**
+ * contains methods which used to solve problems from projecteuler.net
+ * 
+ */
 public class EulerHelper {
 
 	/**
@@ -64,4 +68,34 @@ public class EulerHelper {
 		return a;
 	}
 
+	/**
+	 * Reversed parameter n and return it
+	 * 
+	 * Use problem_4(in method isPalindrome) 
+	 * 
+	 * @param n long
+	 * @return long reversed number
+	 */
+	public static long reverse(long n){
+		long reversed = 0;
+		while (n > 0){
+			reversed = 10 * reversed + (n % 10);
+			n /= 10;
+		}
+		return reversed;
+	}
+	
+	/**
+	 * Verify if parameter n is palindrom
+	 * (Перевіряє чи пареметер n є паліндромом )
+	 * 
+	 * Use problem_4
+	 * 
+	 * @param n long
+	 * @return boolean
+	 */
+	public static boolean isPalindrome(long n){
+		return n == reverse(n);
+	}
+	
 }

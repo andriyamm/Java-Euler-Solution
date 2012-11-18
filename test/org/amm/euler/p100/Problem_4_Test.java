@@ -8,6 +8,6 @@ public class Problem_4_Test {
 
 	@Test
 	public void solution_1_test() {
-		assertEquals(906609, Problem_4.solution_1().intValue());
+		assertEquals(906609, Problem_4.solution_0());
 	}
 }
