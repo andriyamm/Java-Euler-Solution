@@ -9,7 +9,7 @@ import org.amm.euler.lib.EulerHelper;
 *
 * Find the largest palindrome made from the product of two 3-digit numbers.
 */
-public class Problem_4{
+public class Problem_04{
 
 	
 	public static long solution_0(){

@@ -11,7 +11,7 @@ import org.amm.euler.lib.EulerHelper;
  * What is the largest prime factor of the number 600851475143 ?
  * 
  */
-public class Problem_3 {
+public class Problem_03 {
 
 	public static Long solution_1(long n) {
 

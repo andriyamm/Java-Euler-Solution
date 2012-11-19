@@ -14,7 +14,7 @@ package org.amm.euler.p100;
  *         Find the difference between the sum of the squares of the first one
  *         hundred natural numbers and the square of the sum.
  */
-public class Problem_6 {
+public class Problem_06 {
 	
 	public static long solution_0() {
 		int sum = 0;
@@ -26,6 +26,7 @@ public class Problem_6 {
 		return sum * sum - sum2;
 	}
 
+	
 	public static long solution_1() {
 		int limit = 100;
 		long sum = limit * (limit + 1) / 2;

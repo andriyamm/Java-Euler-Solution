@@ -7,7 +7,7 @@ package org.amm.euler.p100;
  * Find the sum of all the multiples of 3 or 5 below 1000.
  * 
  */
-public class Problem_1 {
+public class Problem_01 {
 
 	public static Integer solution_1(Integer n) {
 		Integer sum = 0;
@@ -19,7 +19,7 @@ public class Problem_1 {
 		return sum;
 	}
 
-	// from project euler
+
 	/**
 	 * from forum projecteuler.org
 	 * 
