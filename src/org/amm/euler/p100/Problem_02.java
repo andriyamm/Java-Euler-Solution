@@ -10,7 +10,7 @@ package org.amm.euler.p100;
  *  find the sum of the even-valued terms.
  *
  */
-public class Problem_2 {
+public class Problem_02 {
 
 	public static Long solution_1(Long n) {
 		long sum = 0;

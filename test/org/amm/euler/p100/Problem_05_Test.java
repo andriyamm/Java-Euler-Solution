@@ -4,12 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Problem_2_Test {
-
+public class Problem_05_Test {
+	
 	@Test
 	public void solution_1_test() {
-		Long n = new Long(4000000);
-		assertEquals(4613732, Problem_2.solution_1(n).intValue());
+		assertEquals(232792560, Problem_05.solution_0());
 	}
-
 }

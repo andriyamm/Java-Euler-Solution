@@ -98,4 +98,13 @@ public class EulerHelper {
 		return n == reverse(n);
 	}
 	
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static boolean isPrime(long n) {
+
+		return false;
+	}
 }

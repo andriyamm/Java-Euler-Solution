@@ -4,9 +4,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class Problem_6_Test {
+public class Problem_08_Test {
+	
 	@Test
-	public void solution_1_test() {
+	public void solution_0_test() {
 		assertTrue(true);
 	}
 }
