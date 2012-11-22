@@ -23,14 +23,15 @@ public class EulerHelper {
 	public static BigInteger squareRoot(BigDecimal number) {
 
 		BigDecimal current = new BigDecimal("1");
-		
+
 		BigDecimal two = new BigDecimal("2");
 		BigDecimal eps = new BigDecimal("0.0000000001");
 
 		BigDecimal next = number.divide(current).add(current).divide(two);
 
 		do {
-			next = number.divide(current, 9, BigDecimal.ROUND_FLOOR).add(current).divide(two, 9, BigDecimal.ROUND_FLOOR);
+			next = number.divide(current, 9, BigDecimal.ROUND_FLOOR)
+					.add(current).divide(two, 9, BigDecimal.ROUND_FLOOR);
 			if (next.subtract(current).compareTo(eps) == -1)
 				break;
 			current = next;
@@ -71,40 +72,79 @@ public class EulerHelper {
 	/**
 	 * Reversed parameter n and return it
 	 * 
-	 * Use problem_4(in method isPalindrome) 
+	 * Use problem_4(in method isPalindrome)
 	 * 
-	 * @param n long
+	 * @param n
+	 *            long
 	 * @return long reversed number
 	 */
-	public static long reverse(long n){
+	public static long reverse(long n) {
 		long reversed = 0;
-		while (n > 0){
+		while (n > 0) {
 			reversed = 10 * reversed + (n % 10);
 			n /= 10;
 		}
 		return reversed;
 	}
-	
+
 	/**
-	 * Verify if parameter n is palindrom
-	 * (Перевіряє чи пареметер n є паліндромом )
+	 * Verify if parameter n is palindrom (Перевіряє чи пареметер n є
+	 * паліндромом )
 	 * 
 	 * Use problem_4
 	 * 
-	 * @param n long
+	 * @param n
+	 *            long
 	 * @return boolean
 	 */
-	public static boolean isPalindrome(long n){
+	public static boolean isPalindrome(long n) {
 		return n == reverse(n);
 	}
-	
+
 	/**
+	 * verify if the number passed as argument is prime
 	 * 
 	 * @param n
-	 * @return
+	 *            long number which will be verified
+	 * @return true if number is prime, otherwise false
 	 */
 	public static boolean isPrime(long n) {
 
-		return false;
+		if (n == 1)
+			return false;
+		else if (n < 4)
+			return true; // 2 and 3 are prime
+		else if ((n % 2) == 0)
+			return false;
+		else if (n < 9)
+			return true; //already excluded 4,6 and 8.
+		else if ((n % 3) == 0)
+			return false;
+		else {
+			long r = (long) Math.floor(Math.sqrt(n)); // sqrt(n) rounded to the
+													  // greatest integer
+			long f = 5;
+			while (f <= r) {
+				if ((n % f) == 0)
+					return false;
+				if ((n % (f + 2)) == 0)
+					return false;
+				f += 6;
+			} 
+			return true; // (in all other cases)
+		}
+	}
+	
+	/**
+	 * Priblem_09
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public static int gcd(int a, int b) {
+		if (b == 0)
+			return a;
+		return gcd(b, a % b);
 	}
 }

@@ -5,7 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigInteger;
 
-
+/**
+ * Find the first ten digits of the sum of one-hundred 50-digit numbers.
+ */
 public class Problem_13 {
 
 	
