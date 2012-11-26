@@ -28,6 +28,7 @@ public class Problem_09 {
 		return 0;
 	}
 
+	
 	public static int solution_1(int s) {
 		int s2, mlimit, sm, d, n, k, a, b, c;
 		s2 = s / 2;
@@ -36,8 +37,8 @@ public class Problem_09 {
 		for (int m = 2; m < mlimit; m++) {
 			if ((s2 % m) == 0) {
 				sm = s2 / m;
-				while ((sm % 2) == 0) {// reduce the search space by
-					sm = sm / 2; // removing all factors 2
+				while ((sm % 2) == 0) {
+					sm = sm / 2;
 				}
 				if ((m % 2) == 1)
 					k = m + 2;
@@ -53,10 +54,9 @@ public class Problem_09 {
 						return c*b*a;
 					}
 					k += 2;
-				}// po while ((k < 2 * m) && (k <= sm))
-			}// po if ((s2 % m) == 0)
-		}// po for
+				}
+			}
+		}
 		return 0;
-	}// po run_0
-
+	}
 }
