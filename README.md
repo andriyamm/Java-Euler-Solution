@@ -1,4 +1,1 @@
-finna-be-octo-archer
-====================
-
-projecteuler solution
+Projecteuler solution in Java
